@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jD5-KI-haj">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Minercraftory.ttf">
+            <string>MinercraftoryRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Math_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dirty.png" translatesAutoresizingMaskIntoConstraints="NO" id="nR2-CT-T16">
+                                <rect key="frame" x="0.0" y="856" width="768" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY2-aY-ZOc">
+                                <rect key="frame" x="83" y="408" width="286" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer1ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FOK-c2-HEx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-tz-uuH">
+                                <rect key="frame" x="413" y="408" width="286" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer2ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfJ-C1-5xj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCk-yT-eKW">
+                                <rect key="frame" x="413" y="638" width="286" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer4ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IUj-Ia-HoL"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5DQ-Cb-j4g">
+                                <rect key="frame" x="-1" y="20" width="769" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Quiz" id="fzQ-aU-53L" userLabel="Quiz">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="AxJ-TM-Hcg">
+                                            <connections>
+                                                <action selector="btnBackACTION:" destination="BYZ-38-t0r" id="QAQ-le-dmf"/>
+                                                <segue destination="jD5-KI-haj" kind="show" id="Kdx-Kr-cIz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Correct: 0 / 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRf-8p-sb8">
+                                <rect key="frame" x="107" y="64" width="595" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="47"/>
+                                <color key="textColor" red="0.5847553014755249" green="0.38184314966201782" blue="0.17171934247016907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-Kt-kId">
+                                <rect key="frame" x="83" y="639" width="286" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer3ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ees-yr-0wi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 + 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f67-RE-nw5">
+                                <rect key="frame" x="40" y="211" width="728" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="130"/>
+                                <color key="textColor" red="0.5847553014755249" green="0.38184314966201782" blue="0.17171934247016907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="vrM-WP-prv"/>
+                    <connections>
+                        <outlet property="btnAnswer1" destination="rY2-aY-ZOc" id="XW6-Q4-Giq"/>
+                        <outlet property="btnAnswer2" destination="NGe-tz-uuH" id="rxi-k8-GHC"/>
+                        <outlet property="btnAnswer3" destination="u9K-Kt-kId" id="heX-Aa-ogK"/>
+                        <outlet property="btnAnswer4" destination="SCk-yT-eKW" id="GPt-Kc-COS"/>
+                        <outlet property="lblProblem" destination="f67-RE-nw5" id="Irt-8r-sqk"/>
+                        <outlet property="lblTotalCorrect" destination="gRf-8p-sb8" id="pqI-TG-jof"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.90625" y="114.84374999999999"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="mhY-Wj-mvH">
+            <objects>
+                <viewController id="jD5-KI-haj" customClass="HomeViewController" customModule="Math_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bHN-LY-cKN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gKJ-eV-7IB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="94M-Hp-ref">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-lv-tz3">
+                                <rect key="frame" x="40" y="173" width="688" height="622"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M22-NU-3qa">
+                                        <rect key="frame" x="0.0" y="0.0" width="688" height="133"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
+                                        <state key="normal" title="Addition">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnAdditionACTION:" destination="jD5-KI-haj" eventType="touchUpInside" id="pyX-80-roe"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ZYT-O0-eXf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-US-AR5">
+                                        <rect key="frame" x="0.0" y="163" width="688" height="133"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
+                                        <state key="normal" title="Subtraction">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSubtractionACTION:" destination="jD5-KI-haj" eventType="touchUpInside" id="MaI-5X-qN1"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="kBF-Vr-Syk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-yh-qCH">
+                                        <rect key="frame" x="0.0" y="326" width="688" height="133"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
+                                        <state key="normal" title="Multiplication">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnMultiplicationACTION:" destination="jD5-KI-haj" eventType="touchUpInside" id="xyD-q3-AnL"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="k37-vz-uFZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-kL-04s">
+                                        <rect key="frame" x="0.0" y="489" width="688" height="133"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
+                                        <state key="normal" title="Division">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDivisionACTION:" destination="jD5-KI-haj" eventType="touchUpInside" id="ftR-yi-mPw"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="lVF-jT-LrW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Math-Craft.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-fX-mot">
+                                <rect key="frame" x="20" y="20" width="728" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="yCk-pQ-E3f"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dirty.png" translatesAutoresizingMaskIntoConstraints="NO" id="eJ3-3b-cXM">
+                                <rect key="frame" x="0.0" y="838" width="768" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FVc-lv-tz3" firstAttribute="top" secondItem="Vpl-fX-mot" secondAttribute="bottom" constant="25" id="3bB-zW-sf8"/>
+                            <constraint firstItem="Vpl-fX-mot" firstAttribute="leading" secondItem="94M-Hp-ref" secondAttribute="leadingMargin" id="9tq-V2-QdZ"/>
+                            <constraint firstItem="Vpl-fX-mot" firstAttribute="centerX" secondItem="94M-Hp-ref" secondAttribute="centerX" id="UF4-So-QH1"/>
+                            <constraint firstItem="Vpl-fX-mot" firstAttribute="trailing" secondItem="94M-Hp-ref" secondAttribute="trailingMargin" id="aDW-K6-Ajk"/>
+                            <constraint firstItem="FVc-lv-tz3" firstAttribute="centerX" secondItem="94M-Hp-ref" secondAttribute="centerX" id="dVK-h8-qom"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FVc-lv-tz3" secondAttribute="trailing" constant="20" id="qQn-J0-sPS"/>
+                            <constraint firstItem="FVc-lv-tz3" firstAttribute="leading" secondItem="94M-Hp-ref" secondAttribute="leadingMargin" constant="20" id="t3W-4X-UsA"/>
+                            <constraint firstItem="Vpl-fX-mot" firstAttribute="top" secondItem="bHN-LY-cKN" secondAttribute="bottom" id="w7s-6f-vQ6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAddition" destination="M22-NU-3qa" id="GaI-bU-GX7"/>
+                        <outlet property="btnDivision" destination="D5z-kL-04s" id="RDJ-ZH-CPK"/>
+                        <outlet property="btnMultiplication" destination="BYF-yh-qCH" id="uiu-14-x41"/>
+                        <outlet property="btnSubtraction" destination="YGw-US-AR5" id="4Yn-Ip-aGk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAs-UF-7tY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.5" y="114.84374999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Math-Craft.png" width="661" height="99"/>
+        <image name="dirty.png" width="640" height="480"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kBF-Vr-Syk"/>
+    </inferredMetricsTieBreakers>
+</document>
