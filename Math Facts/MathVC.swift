@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MathVC.swift
 //  Math Facts
 //
 //  Created by Jason Myers on 10/22/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MathVC: UIViewController {
 
     @IBOutlet weak var lblProblem: UILabel!
 	@IBOutlet weak var btnAnswer1: UIButton!
@@ -297,5 +297,9 @@ class ViewController: UIViewController {
 	}
 	
 
+	@IBAction func backBtnPressed(_ sender: UIButton) {
+		
+		dismiss(animated: true, completion: nil)
+	}
 }
 

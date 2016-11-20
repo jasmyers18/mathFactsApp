@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jD5-KI-haj">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,44 +18,44 @@
         <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Math_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MathVC" customModule="Math_Facts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirty.png" translatesAutoresizingMaskIntoConstraints="NO" id="nR2-CT-T16">
-                                <rect key="frame" x="0.0" y="1236" width="1024" height="130"/>
+                                <rect key="frame" x="0.0" y="894" width="768" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="mYJ-aq-FCd"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LxK-iI-QtF">
-                                <rect key="frame" x="20" y="70" width="984" height="1156"/>
+                                <rect key="frame" x="20" y="160" width="728" height="724"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Correct: 0 / 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRf-8p-sb8">
-                                        <rect key="frame" x="291.5" y="0.0" width="401.5" height="135.5"/>
+                                        <rect key="frame" x="163.5" y="0.0" width="401.5" height="85"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="47"/>
                                         <color key="textColor" red="0.5847553014755249" green="0.38184314966201782" blue="0.17171934247016907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 + 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f67-RE-nw5">
-                                        <rect key="frame" x="256.5" y="135.5" width="471" height="373.5"/>
+                                        <rect key="frame" x="128.5" y="85" width="471" height="234"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="130"/>
                                         <color key="textColor" red="0.5847553014755249" green="0.38184314966201782" blue="0.17171934247016907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pj1-GF-RCr">
-                                        <rect key="frame" x="0.0" y="509" width="984" height="647"/>
+                                        <rect key="frame" x="0.0" y="319" width="728" height="405"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QBm-jT-Gxt">
-                                                <rect key="frame" x="0.0" y="0.0" width="984" height="308.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="728" height="187.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY2-aY-ZOc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="477" height="308.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="349" height="187.5"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
                                                         <state key="normal" title="1">
@@ -66,7 +66,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-tz-uuH">
-                                                        <rect key="frame" x="507" y="0.0" width="477" height="308.5"/>
+                                                        <rect key="frame" x="379" y="0.0" width="349" height="187.5"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
                                                         <state key="normal" title="2">
@@ -79,10 +79,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Gw-l3-GSt">
-                                                <rect key="frame" x="0.0" y="338.5" width="984" height="308.5"/>
+                                                <rect key="frame" x="0.0" y="217.5" width="728" height="187.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-Kt-kId">
-                                                        <rect key="frame" x="0.0" y="0.0" width="477" height="308.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="349" height="187.5"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
                                                         <state key="normal" title="3">
@@ -93,7 +93,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCk-yT-eKW">
-                                                        <rect key="frame" x="507" y="0.0" width="477" height="308.5"/>
+                                                        <rect key="frame" x="379" y="0.0" width="349" height="187.5"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="69"/>
                                                         <state key="normal" title="4">
@@ -113,15 +113,31 @@
                                     <constraint firstItem="pj1-GF-RCr" firstAttribute="leading" secondItem="LxK-iI-QtF" secondAttribute="leadingMargin" id="ZYg-QN-wWO"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfT-UK-fEG">
+                                <rect key="frame" x="20" y="28" width="129" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="J86-hV-s5W"/>
+                                    <constraint firstAttribute="height" constant="79" id="rWh-t6-CDE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tam-iX-waW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LxK-iI-QtF" secondAttribute="trailing" id="6rf-0R-csj"/>
                             <constraint firstItem="nR2-CT-T16" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9CE-To-kTf"/>
+                            <constraint firstItem="nfT-UK-fEG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9Uo-X0-0UZ"/>
                             <constraint firstItem="LxK-iI-QtF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B3I-6V-c31"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nR2-CT-T16" secondAttribute="bottom" id="Hqa-SH-wP8"/>
                             <constraint firstAttribute="trailing" secondItem="nR2-CT-T16" secondAttribute="trailing" id="cGr-VH-GUO"/>
-                            <constraint firstItem="LxK-iI-QtF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="jno-1v-qUr"/>
+                            <constraint firstItem="LxK-iI-QtF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="jno-1v-qUr"/>
+                            <constraint firstItem="nfT-UK-fEG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qWH-rp-kkN"/>
                             <constraint firstItem="LxK-iI-QtF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tpW-O7-Xhs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LxK-iI-QtF" secondAttribute="bottom" constant="140" id="vsG-vh-Iig"/>
                         </constraints>
@@ -138,25 +154,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778.90625" y="114.84374999999999"/>
+            <point key="canvasLocation" x="778.7109375" y="114.64128843338213"/>
         </scene>
-        <!--Home View Controller-->
+        <!--HomeVC-->
         <scene sceneID="mhY-Wj-mvH">
             <objects>
-                <viewController id="jD5-KI-haj" customClass="HomeViewController" customModule="Math_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jD5-KI-haj" customClass="HomeVC" customModule="Math_Facts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bHN-LY-cKN"/>
                         <viewControllerLayoutGuide type="bottom" id="gKJ-eV-7IB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="94M-Hp-ref">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-lv-tz3">
-                                <rect key="frame" x="40" y="173" width="944" height="1033"/>
+                                <rect key="frame" x="40" y="173" width="688" height="691"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M22-NU-3qa">
-                                        <rect key="frame" x="0.0" y="0.0" width="944" height="239.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="688" height="154"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
                                         <state key="normal" title="Addition">
@@ -168,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-US-AR5">
-                                        <rect key="frame" x="0.0" y="264.5" width="944" height="239.5"/>
+                                        <rect key="frame" x="0.0" y="179" width="688" height="154"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
                                         <state key="normal" title="Subtraction">
@@ -180,7 +196,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-yh-qCH">
-                                        <rect key="frame" x="0.0" y="529" width="944" height="239.5"/>
+                                        <rect key="frame" x="0.0" y="358" width="688" height="154"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
                                         <state key="normal" title="Multiplication">
@@ -192,7 +208,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-kL-04s">
-                                        <rect key="frame" x="0.0" y="793.5" width="944" height="239.5"/>
+                                        <rect key="frame" x="0.0" y="537" width="688" height="154"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="MinercraftoryRegular" family="Minercraftory" pointSize="77"/>
                                         <state key="normal" title="Division">
@@ -206,13 +222,13 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Math-Craft.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-fX-mot">
-                                <rect key="frame" x="20" y="20" width="984" height="128"/>
+                                <rect key="frame" x="20" y="20" width="728" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="yCk-pQ-E3f"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirty.png" translatesAutoresizingMaskIntoConstraints="NO" id="eJ3-3b-cXM">
-                                <rect key="frame" x="0.0" y="1236" width="1024" height="130"/>
+                                <rect key="frame" x="0.0" y="894" width="768" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="J5a-er-hOj"/>
                                 </constraints>

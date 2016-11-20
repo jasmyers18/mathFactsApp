@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  HomeVC.swift
 //  Math Facts
 //
 //  Created by Jason Myers on 10/25/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeVC: UIViewController {
 	
 	@IBOutlet weak var btnAddition: UIButton!
 	@IBOutlet weak var btnSubtraction: UIButton!
@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
 	}
 	
 		override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-			let DestinationViewController : ViewController = segue.destination as! ViewController
+			let DestinationViewController : MathVC = segue.destination as! MathVC
 	
 			print(mathOperator)
 	
