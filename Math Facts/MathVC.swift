@@ -16,6 +16,17 @@ class MathVC: UIViewController {
 	@IBOutlet weak var btnAnswer3: UIButton!
 	@IBOutlet weak var btnAnswer4: UIButton!
 	@IBOutlet weak var lblTotalCorrect: UILabel!
+	
+    override func viewDidLoad() {
+        super.viewDidLoad()
+		
+		btnAnswer1.layer.cornerRadius = 15
+		btnAnswer2.layer.cornerRadius = 15
+		btnAnswer3.layer.cornerRadius = 15
+		btnAnswer4.layer.cornerRadius = 15
+
+		randomizeNumber()
+    }
 
 	var firstNumber : Int = 0
 	var secondNumber : Int = 0
@@ -33,18 +44,6 @@ class MathVC: UIViewController {
 	var incorrectAnswer2 : Int = 0
 	var incorrectAnswer3 : Int = 0
 	
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		
-		btnAnswer1.layer.cornerRadius = 15
-		btnAnswer2.layer.cornerRadius = 15
-		btnAnswer3.layer.cornerRadius = 15
-		btnAnswer4.layer.cornerRadius = 15
-		
-		randomizeNumber()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,11 +79,6 @@ class MathVC: UIViewController {
 		} else if (buttonRandom != 3) {
 			incorrectAnswerVOID()
 		}
-	}
-	
-	@IBAction func btnBackACTION(_ sender: UIBarButtonItem) {
-		mathOperator = ""
-		totalCorrect = 0
 	}
 	
 	func randomizeNumber() {
@@ -268,34 +262,27 @@ class MathVC: UIViewController {
 	func correctLogic() {
 		totalCorrect += 1
 		totalQuestions += 1
-		correctIncorrect = "Correct"
 	}
 	
 	func incorrectAnswerVOID() {
-		correctIncorrect = "Incorrect"
-		printCorrectIncorrect()
 		totalQuestions += 1
+		printCorrectIncorrect()
 	}
 	
 	func printCorrectIncorrect() {
 		lblTotalCorrect.text = "Total Correct: \(totalCorrect) / \(totalQuestions)"
-//		lblCorrectIncorrect.text = "\(correctIncorrect)"
-//		
-		reset()
-	}
-	
-	func reset() {
+
 		randomizeNumber()
 	}
 	
-	func resetButton() {
+	
+	@IBAction func resetBtnPressed(_ sender: UIButton) {
 		totalCorrect = 0
-//		lblTotalCorrect.text = "Total correct: \(totalCorrect)"
-//		lblCorrectIncorrect.text = "Correct / Incorrect"
-	
+		totalQuestions = 0
+		lblTotalCorrect.text = "Total correct: 0/\(totalCorrect)"
+		
 		randomizeNumber()
 	}
-	
 
 	@IBAction func backBtnPressed(_ sender: UIButton) {
 		
