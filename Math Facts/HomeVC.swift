@@ -15,8 +15,8 @@ class HomeVC: UIViewController {
 	@IBOutlet weak var btnMultiplication: UIButton!
 	@IBOutlet weak var btnDivision: UIButton!
 
-	
 	var mathOperator = ""
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,11 +25,6 @@ class HomeVC: UIViewController {
 		btnSubtraction.layer.cornerRadius = 15
 		btnMultiplication.layer.cornerRadius = 15
 		btnDivision.layer.cornerRadius = 15
-	}
-	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
 	}
 	
 	@IBAction func btnAdditionACTION(_ sender: UIButton) {
@@ -47,6 +42,8 @@ class HomeVC: UIViewController {
 	@IBAction func btnDivisionACTION(_ sender: UIButton) {
 		mathOperator = "÷"
 	}
+	
+	
 	
 		override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 			let DestinationViewController : MathVC = segue.destination as! MathVC

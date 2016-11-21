@@ -17,6 +17,10 @@ class MathVC: UIViewController {
 	@IBOutlet weak var btnAnswer4: UIButton!
 	@IBOutlet weak var lblTotalCorrect: UILabel!
 	
+	let mth = Math()
+	var mathOperator = ""
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -25,217 +29,77 @@ class MathVC: UIViewController {
 		btnAnswer3.layer.cornerRadius = 15
 		btnAnswer4.layer.cornerRadius = 15
 
-		randomizeNumber()
-    }
-
-	var firstNumber : Int = 0
-	var secondNumber : Int = 0
-	var answer : Int = 0
-	
-	var mathOperator = String()
-	
-	var totalCorrect : Int = 0
-	var correctIncorrect = ""
-	var totalQuestions : Int = 0
-	
-	var buttonRandom : Int = 0
-	
-	var incorrectAnswer1 : Int = 0
-	var incorrectAnswer2 : Int = 0
-	var incorrectAnswer3 : Int = 0
-	
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		mth.mathOperator = mathOperator
+		mth.randomizeNumber()
+		printQuestion()
+		printButtonText()
     }
 
 	@IBAction func btnAnswer1ACTION(_ sender: UIButton) {
-		if buttonRandom == 0 {
+		if mth.buttonRandom == 0 {
 			button1Correct()
-		} else if (buttonRandom != 0) {
-			incorrectAnswerVOID()
+		} else if (mth.buttonRandom != 0) {
+			incorrectAnswer()
 		}
 	}
 	
 	@IBAction func btnAnswer2ACTION(_ sender: UIButton) {
-		if buttonRandom == 1 {
+		if mth.buttonRandom == 1 {
 			button2Correct()
-		} else if (buttonRandom != 1) {
-			incorrectAnswerVOID()
+		} else if (mth.buttonRandom != 1) {
+			incorrectAnswer()
 		}
 	}
 	
 	@IBAction func btnAnswer3ACTION(_ sender: UIButton) {
-		if buttonRandom == 2 {
+		if mth.buttonRandom == 2 {
 			button3Correct()
-		} else if (buttonRandom != 2) {
-			incorrectAnswerVOID()
+		} else if (mth.buttonRandom != 2) {
+			incorrectAnswer()
 		}
 	}
 	
 	@IBAction func btnAnswer4ACTION(_ sender: UIButton) {
-		if buttonRandom == 3 {
+		if mth.buttonRandom == 3 {
 			button4Correct()
-		} else if (buttonRandom != 3) {
-			incorrectAnswerVOID()
+		} else if (mth.buttonRandom != 3) {
+			incorrectAnswer()
 		}
-	}
-	
-	func randomizeNumber() {
-		var tempFirstNumber = 0
-		var tempSecondNumber = 0
-		var canDivideEvenly = false
-		var bothZero = true
-		
-		firstNumber = Int(arc4random_uniform(9))
-		secondNumber = Int(arc4random_uniform(9))
-		
-		switch mathOperator {
-		case "+":
-			answer = firstNumber + secondNumber
-		case "-":
-			if secondNumber > firstNumber {
-				tempFirstNumber = firstNumber
-				tempSecondNumber = secondNumber
-				
-				firstNumber = tempSecondNumber
-				secondNumber = tempFirstNumber
-			}
-			
-			answer = firstNumber - secondNumber
-		case "x":
-			answer = firstNumber * secondNumber
-		case "÷":
-			while bothZero {
-				if firstNumber == 0 || secondNumber == 0 {
-					
-					firstNumber = Int(arc4random_uniform(20))
-					secondNumber = Int(arc4random_uniform(20))
-					
-				} else {
-					bothZero = false
-				}
-			}
-			
-			bothZero = true
-			
-			while !canDivideEvenly {
-				
-				if secondNumber > firstNumber {
-					tempFirstNumber = firstNumber
-					tempSecondNumber = secondNumber
-					
-					firstNumber = tempSecondNumber
-					secondNumber = tempFirstNumber
-				}
-				
-				if firstNumber % secondNumber != 0 {
-					firstNumber += 1
-					
-				} else {
-					canDivideEvenly = true
-				}
-			}
-			
-			canDivideEvenly = false
-			
-			answer = firstNumber / secondNumber
-		default:
-			print("Couldn't find the operator")
-		}
-		
-		
-		buttonRandom = Int(arc4random_uniform(4))
-		
-		incorrectAnswer1 = Int(arc4random_uniform(5))
-		incorrectAnswer2 = Int(arc4random_uniform(2))
-		incorrectAnswer3 = Int(arc4random_uniform(9))
-		
-		randomNumberChecks()
-		
-		printQuestion()
-		printButtonText()
-		
-		print(answer)
 	}
 	
 	func printQuestion() {
-		lblProblem.text = "\(firstNumber) \(mathOperator) \(secondNumber) = ?"
-	}
-	
-	func randomNumberChecks() {
-		
-		while answer == incorrectAnswer1 || answer == incorrectAnswer2 || answer == incorrectAnswer3 || incorrectAnswer1 == incorrectAnswer2 || incorrectAnswer1 == incorrectAnswer3 || incorrectAnswer2 == incorrectAnswer3 {
-			
-			checkAnswerValues()
-			checkIncorrectAnswerValues()
-		}
-	}
-	
-	func checkAnswerValues() {
-		if answer == incorrectAnswer1 || answer == incorrectAnswer2 || answer == incorrectAnswer3 {
-			
-			if answer == incorrectAnswer1 {
-				incorrectAnswer1 += 2
-				
-			}
-			
-			if answer == incorrectAnswer2 {
-				incorrectAnswer2 += 4
-				
-			}
-			
-			if answer == incorrectAnswer3 {
-				incorrectAnswer3 += 6
-			}
-		}
-	}
-	
-	func checkIncorrectAnswerValues() {
-		if incorrectAnswer1 == incorrectAnswer2 || incorrectAnswer1 == incorrectAnswer3 || incorrectAnswer2 == incorrectAnswer3 {
-			
-			if incorrectAnswer1 == incorrectAnswer2 {
-				incorrectAnswer2 += 3
-			}
-			
-			if incorrectAnswer1 == incorrectAnswer3 {
-				incorrectAnswer1 += 5
-			}
-			
-			if incorrectAnswer2 == incorrectAnswer3 {
-				incorrectAnswer3 += 7
-			}
-		}
+		lblProblem.text = "\(mth.firstNumber) \(mth.mathOperator) \(mth.secondNumber) = ?"
 	}
 	
 	func printButtonText() {
+		print(mth.buttonRandom)
 		
-		if buttonRandom == 0 {
-			btnAnswer1.setTitle("\(answer)", for: UIControlState.normal)
-			btnAnswer2.setTitle("\(incorrectAnswer1)", for: UIControlState.normal)
-			btnAnswer3.setTitle("\(incorrectAnswer2)", for: UIControlState.normal)
-			btnAnswer4.setTitle("\(incorrectAnswer3)", for: UIControlState.normal)
+		if mth.buttonRandom == 0 {
+			btnAnswer1.setTitle("\(mth.answer)", for: UIControlState.normal)
+			btnAnswer2.setTitle("\(mth.incorrectAnswer1)", for: UIControlState.normal)
+			btnAnswer3.setTitle("\(mth.incorrectAnswer2)", for: UIControlState.normal)
+			btnAnswer4.setTitle("\(mth.incorrectAnswer3)", for: UIControlState.normal)
 		}
 		
-		if buttonRandom == 1 {
-			btnAnswer2.setTitle("\(answer)", for: UIControlState.normal)
-			btnAnswer1.setTitle("\(incorrectAnswer1)", for: UIControlState.normal)
-			btnAnswer3.setTitle("\(incorrectAnswer2)", for: UIControlState.normal)
-			btnAnswer4.setTitle("\(incorrectAnswer3)", for: UIControlState.normal)
+		if mth.buttonRandom == 1 {
+			btnAnswer2.setTitle("\(mth.answer)", for: UIControlState.normal)
+			btnAnswer1.setTitle("\(mth.incorrectAnswer1)", for: UIControlState.normal)
+			btnAnswer3.setTitle("\(mth.incorrectAnswer2)", for: UIControlState.normal)
+			btnAnswer4.setTitle("\(mth.incorrectAnswer3)", for: UIControlState.normal)
 		}
 		
-		if buttonRandom == 2 {
-			btnAnswer3.setTitle("\(answer)", for: UIControlState.normal)
-			btnAnswer1.setTitle("\(incorrectAnswer1)", for: UIControlState.normal)
-			btnAnswer2.setTitle("\(incorrectAnswer2)", for: UIControlState.normal)
-			btnAnswer4.setTitle("\(incorrectAnswer3)", for: UIControlState.normal)
+		if mth.buttonRandom == 2 {
+			btnAnswer3.setTitle("\(mth.answer)", for: UIControlState.normal)
+			btnAnswer1.setTitle("\(mth.incorrectAnswer1)", for: UIControlState.normal)
+			btnAnswer2.setTitle("\(mth.incorrectAnswer2)", for: UIControlState.normal)
+			btnAnswer4.setTitle("\(mth.incorrectAnswer3)", for: UIControlState.normal)
 		}
 		
-		if buttonRandom == 3 {
-			btnAnswer4.setTitle("\(answer)", for: UIControlState.normal)
-			btnAnswer3.setTitle("\(incorrectAnswer1)", for: UIControlState.normal)
-			btnAnswer2.setTitle("\(incorrectAnswer2)", for: UIControlState.normal)
-			btnAnswer1.setTitle("\(incorrectAnswer3)", for: UIControlState.normal)
+		if mth.buttonRandom == 3 {
+			btnAnswer4.setTitle("\(mth.answer)", for: UIControlState.normal)
+			btnAnswer3.setTitle("\(mth.incorrectAnswer1)", for: UIControlState.normal)
+			btnAnswer2.setTitle("\(mth.incorrectAnswer2)", for: UIControlState.normal)
+			btnAnswer1.setTitle("\(mth.incorrectAnswer3)", for: UIControlState.normal)
 		}
 	}
 	
@@ -260,28 +124,31 @@ class MathVC: UIViewController {
 	}
 	
 	func correctLogic() {
-		totalCorrect += 1
-		totalQuestions += 1
+		mth.totalCorrect += 1
+		mth.totalQuestions += 1
 	}
 	
-	func incorrectAnswerVOID() {
-		totalQuestions += 1
+	func incorrectAnswer() {
+		mth.totalQuestions += 1
 		printCorrectIncorrect()
 	}
 	
 	func printCorrectIncorrect() {
-		lblTotalCorrect.text = "Total Correct: \(totalCorrect) / \(totalQuestions)"
+		lblTotalCorrect.text = "Total Correct: \(mth.totalCorrect) / \(mth.totalQuestions)"
 
-		randomizeNumber()
+		mth.randomizeNumber()
+		printQuestion()
+		printButtonText()
 	}
 	
-	
 	@IBAction func resetBtnPressed(_ sender: UIButton) {
-		totalCorrect = 0
-		totalQuestions = 0
-		lblTotalCorrect.text = "Total correct: 0/\(totalCorrect)"
+		mth.totalCorrect = 0
+		mth.totalQuestions = 0
+		lblTotalCorrect.text = "Total correct: 0 / \(mth.totalCorrect)"
 		
-		randomizeNumber()
+		mth.randomizeNumber()
+		printQuestion()
+		printButtonText()
 	}
 
 	@IBAction func backBtnPressed(_ sender: UIButton) {
