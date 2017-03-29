@@ -20,11 +20,9 @@
 		19DFFFA11DC9902D00C9689E /* BlockyMathFactsScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DFFFA01DC9902D00C9689E /* BlockyMathFactsScreen.png */; };
 		19DFFFA51DC9AAD100C9689E /* Math-Craft.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DFFFA41DC9AAD100C9689E /* Math-Craft.png */; };
 		19DFFFA71DC9AC2D00C9689E /* Math-Craft (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 19DFFFA61DC9AC2D00C9689E /* Math-Craft (2).png */; };
-		3D3EEF136230753410985E8D /* Pods_Math_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D10477BFE09FF4AA3C4089 /* Pods_Math_Facts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15D10477BFE09FF4AA3C4089 /* Pods_Math_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		198FB8431DBC0D44004CF4CF /* Math Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		198FB8461DBC0D44004CF4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198FB8481DBC0D44004CF4CF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
@@ -40,8 +38,6 @@
 		19DFFFA01DC9902D00C9689E /* BlockyMathFactsScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlockyMathFactsScreen.png; sourceTree = "<group>"; };
 		19DFFFA41DC9AAD100C9689E /* Math-Craft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Math-Craft.png"; sourceTree = "<group>"; };
 		19DFFFA61DC9AC2D00C9689E /* Math-Craft (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Math-Craft (2).png"; sourceTree = "<group>"; };
-		64F9CA84172F3D19C1D9C7A2 /* Pods-Math Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Facts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Math Facts/Pods-Math Facts.release.xcconfig"; sourceTree = "<group>"; };
-		F711580B21CB93464BEE081D /* Pods-Math Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Facts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Math Facts/Pods-Math Facts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3EEF136230753410985E8D /* Pods_Math_Facts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +56,8 @@
 			children = (
 				198FB8451DBC0D44004CF4CF /* Math Facts */,
 				198FB8441DBC0D44004CF4CF /* Products */,
-				BD16F2FE505CF9D5BA7D8CE9 /* Pods */,
 				E5CF6AA00FFAA5D4B3550C91 /* Frameworks */,
+				74F18A5E98B49298613F9C24 /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -120,11 +115,9 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		BD16F2FE505CF9D5BA7D8CE9 /* Pods */ = {
+		74F18A5E98B49298613F9C24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F711580B21CB93464BEE081D /* Pods-Math Facts.debug.xcconfig */,
-				64F9CA84172F3D19C1D9C7A2 /* Pods-Math Facts.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -132,7 +125,6 @@
 		E5CF6AA00FFAA5D4B3550C91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15D10477BFE09FF4AA3C4089 /* Pods_Math_Facts.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,12 +136,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 198FB8551DBC0D44004CF4CF /* Build configuration list for PBXNativeTarget "Math Facts" */;
 			buildPhases = (
-				CD448A2B80AB8C27CE3AF332 /* [CP] Check Pods Manifest.lock */,
 				198FB83F1DBC0D44004CF4CF /* Sources */,
 				198FB8401DBC0D44004CF4CF /* Frameworks */,
 				198FB8411DBC0D44004CF4CF /* Resources */,
-				DEF4C417237C82003AEDF13E /* [CP] Embed Pods Frameworks */,
-				8522A6E0B6EE8A8993D35499 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jason Myers";
 				TargetAttributes = {
 					198FB8421DBC0D44004CF4CF = {
@@ -213,54 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8522A6E0B6EE8A8993D35499 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Math Facts/Pods-Math Facts-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD448A2B80AB8C27CE3AF332 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DEF4C417237C82003AEDF13E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Math Facts/Pods-Math Facts-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		198FB83F1DBC0D44004CF4CF /* Sources */ = {
@@ -314,6 +255,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -363,6 +305,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -389,7 +332,6 @@
 		};
 		198FB8561DBC0D44004CF4CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F711580B21CB93464BEE081D /* Pods-Math Facts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M2WWQ5AJ25;
@@ -405,7 +347,6 @@
 		};
 		198FB8571DBC0D44004CF4CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64F9CA84172F3D19C1D9C7A2 /* Pods-Math Facts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M2WWQ5AJ25;
